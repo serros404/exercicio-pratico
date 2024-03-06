@@ -1,4 +1,6 @@
-﻿namespace ExercicioPratico
+﻿using System.Reflection;
+
+namespace ExercicioPratico
     {
     internal class Carro
         {
@@ -30,7 +32,7 @@
             Console.WriteLine($"Ano: {this.Ano}");
             Console.WriteLine($"Potência: {this.Potencia} KM/H");
             Acelerar();
-
+            
         }
 
 
@@ -39,5 +41,22 @@
             {
             Console.WriteLine($"Acelerando o meu {this.Marca}");
             }
+
+        // Ao utilizar esse construtor, os valores atribuídos a Marca, Ano e Potência serão os valores padrões
+        // do compilador
+        public Carro(string? modelo, string? montadora)
+            {
+            Modelo = modelo;
+            Montadora = montadora;
+            }
+
+        // Método VelocidadeMáxima que retorna um valor ao método chamador com o
+        // valor do tipo definido pelo método (double)
+        public double VelocidadeMaxima(int potencia)
+            {
+            return potencia * 1.75;
+            }
+
         }
+
     }
