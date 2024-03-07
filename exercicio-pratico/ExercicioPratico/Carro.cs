@@ -68,7 +68,13 @@
             return potencia;
             }
 
+        public int AumentarPotenciaVelocidade(int potencia, out double velocidade)
+            {
+            potencia += 7;
+            velocidade = potencia * 1.75;
+            return potencia;
 
+            }
 
         }
 
