@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace ExercicioPratico
+﻿namespace ExercicioPratico
     {
     internal class Carro
         {
@@ -57,6 +55,22 @@ namespace ExercicioPratico
             return potencia * 1.75;
             }
 
+
+        public int AumentarPotencia(int potencia)
+            {
+           potencia += 3;
+            return potencia;
+            }
+
+        public int AumentarPotencia(ref int potencia)
+            {
+            potencia += 5;
+            return potencia;
+            }
+
+
+
         }
 
-    }
+
+}
