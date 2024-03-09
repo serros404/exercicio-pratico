@@ -20,4 +20,15 @@ Console.Write("Aumentando a Potencia (por referência : +5CV) : ");
 var novaPotenciaFord = ford.AumentarPotencia(ref ford.Potencia);
 Console.Write("-> " + novaPotenciaFord);
 Console.WriteLine("\nO valor do campo Potencia foi alterado : " + ford.Potencia + "\n");
+
+Console.WriteLine("\nUsando argumentos nomeados e parâmetros opcionais \n");
+Console.WriteLine("Sem informar o parâmetro opcional Ano");
+ford.ExibirInfo(Modelo: ford.Modelo, Montadora: ford.Montadora,
+Marca: ford.Marca, Potencia: ford.Potencia);
+
+Console.WriteLine("\nInformando o parâmetro opcional Ano");
+ford.ExibirInfo(Modelo: ford.Modelo, Montadora: ford.Montadora,
+Marca: ford.Marca, Potencia: ford.Potencia, Ano: ford.Ano);
+
+
 Console.ReadKey();

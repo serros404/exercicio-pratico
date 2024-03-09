@@ -76,6 +76,15 @@
 
             }
 
+        public void ExibirInfo(string? Modelo, string? Montadora, string? Marca, int Potencia, int Ano = 2022)
+            {
+            Console.WriteLine(Modelo);
+            Console.WriteLine(Montadora);
+            Console.WriteLine(Marca);
+            Console.WriteLine(Potencia);
+            Console.WriteLine(Ano);
+            }
+
         }
 
 
