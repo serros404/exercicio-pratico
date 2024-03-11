@@ -6,7 +6,19 @@
         public string? Modelo;
         public string? Montadora;
         public string? Marca;
-        public int Ano;
+        private int ano;
+        public int Ano { 
+            get { return ano; }
+            set
+                {
+                if (ano < 2000)
+                    value = 2000;
+                else if (ano > 2022)
+                    value = 2022;
+                else
+                    ano = value;
+                }
+            }
         public int Potencia;
         public static double ValorIpva;
 
