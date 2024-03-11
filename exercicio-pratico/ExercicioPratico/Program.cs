@@ -1,9 +1,15 @@
 ﻿using ExercicioPratico;
-using System.Collections.Concurrent;
+
 
 Carro chevrolet = new("Sedan", "Chevrolet", "Onix", 2016, 110);
 Carro ford = new("SUV", "Ford", "EcoSport", 2018, 120);
 Carro ford2 = new("SUV", "Ford");
+
+Console.WriteLine("Chamando o método estático ObterValorIpva");
+
+Carro.ObterValorIpva();
+
+Console.WriteLine($"Valor do campo ValorIpva : {Carro.ValorIpva}%");
 
 chevrolet.Exibir();
 Console.Write("Aumentando a Potência (por valor : + 3 CV : ");

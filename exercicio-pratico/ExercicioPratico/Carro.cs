@@ -8,6 +8,7 @@
         public string? Marca;
         public int Ano;
         public int Potencia;
+        public static double ValorIpva;
 
         // Construtor dos campos acima
         public Carro(string? modelo, string? montadora, string? marca, int ano, int potencia)
@@ -30,7 +31,7 @@
             Console.WriteLine($"Ano: {this.Ano}");
             Console.WriteLine($"Potência: {this.Potencia} KM/H");
             Acelerar();
-            
+
         }
 
 
@@ -84,6 +85,12 @@
             Console.WriteLine(Potencia);
             Console.WriteLine(Ano);
             }
+
+        public static void ObterValorIpva()
+            {
+            ValorIpva = 4;
+            }
+
 
         }
 
