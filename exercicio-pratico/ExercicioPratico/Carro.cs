@@ -7,7 +7,8 @@
         public string? Montadora;
         public string? Marca;
         private int ano;
-        public int Ano { 
+        public int Ano
+            {
             get { return ano; }
             set
                 {
@@ -21,15 +22,17 @@
             }
         public int Potencia;
         public static double ValorIpva;
+        public int Cor;
 
         // Construtor dos campos acima
-        public Carro(string? modelo, string? montadora, string? marca, int ano, int potencia)
+        public Carro(string? modelo, string? montadora, string? marca, int ano, int potencia, int cor)
             {
             Modelo = modelo;
             Montadora = montadora;
             Marca = marca;
             Ano = ano;
             Potencia = potencia;
+            Cor = cor;
             }
 
 
@@ -44,7 +47,7 @@
             Console.WriteLine($"Potência: {this.Potencia} KM/H");
             Acelerar();
 
-        }
+            }
 
 
         // Método Acelerar
@@ -71,7 +74,7 @@
 
         public int AumentarPotencia(int potencia)
             {
-           potencia += 3;
+            potencia += 3;
             return potencia;
             }
 
@@ -89,13 +92,14 @@
 
             }
 
-        public void ExibirInfo(string? Modelo, string? Montadora, string? Marca, int Potencia, int Ano = 2022)
+        public void ExibirInfo(string? Modelo, string? Montadora, string? Marca, int Potencia, int Cor = 1, int Ano = 2022)
             {
             Console.WriteLine(Modelo);
             Console.WriteLine(Montadora);
             Console.WriteLine(Marca);
             Console.WriteLine(Potencia);
             Console.WriteLine(Ano);
+            Console.WriteLine((Cores)Cor);
             }
 
         public static void ObterValorIpva()
@@ -105,6 +109,4 @@
 
 
         }
-
-
-}
+    }

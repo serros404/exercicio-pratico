@@ -1,9 +1,19 @@
 ﻿using ExercicioPratico;
 
+Console.WriteLine($"{Cores.Branco} - {(int)Cores.Branco}");
+Console.WriteLine($"{Cores.Vermelho} - {(int)Cores.Vermelho}");
+Console.WriteLine($"{Cores.Preto} - {(int)Cores.Preto}");
+Console.WriteLine($"{Cores.Cinza} - {(int)Cores.Cinza}");
+Console.WriteLine($"{Cores.Prata} - {(int)Cores.Prata}");
+Console.WriteLine($"{Cores.Azul} - {(int)Cores.Azul}");
 
-Carro chevrolet = new("Sedan", "Chevrolet", "Onix", 2016, 110);
-Carro ford = new("SUV", "Ford", "EcoSport", 2018, 120);
+Console.WriteLine("\nSelecione a Cor do carro");
+int cor = Convert.ToInt32(Console.ReadLine());
+
+Carro chevrolet = new("Sedan", "Chevrolet", "Onix", 2016, 110, cor);
+Carro ford = new("SUV", "Ford", "EcoSport", 2018, 120, cor);
 Carro ford2 = new("SUV", "Ford");
+
 
 Console.WriteLine("Chamando o método estático ObterValorIpva");
 
@@ -36,5 +46,7 @@ Console.WriteLine("\nInformando o parâmetro opcional Ano");
 ford.ExibirInfo(Modelo: ford.Modelo, Montadora: ford.Montadora,
 Marca: ford.Marca, Potencia: ford.Potencia, Ano: ford.Ano);
 
+chevrolet.ExibirInfo(chevrolet.Modelo, chevrolet.Montadora, chevrolet.Marca,
+chevrolet.Potencia, chevrolet.Cor);
 
 Console.ReadKey();
