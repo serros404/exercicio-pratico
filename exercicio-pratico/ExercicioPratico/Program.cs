@@ -40,7 +40,7 @@ Console.WriteLine("\nO valor do campo Potencia foi alterado : " + ford.Potencia 
 Console.WriteLine("\nUsando argumentos nomeados e parâmetros opcionais \n");
 Console.WriteLine("Sem informar o parâmetro opcional Ano");
 ford.ExibirInfo(Modelo: ford.Modelo, Montadora: ford.Montadora,
-Marca: ford.Marca, Potencia: ford.Potencia);
+Marca: ford.Marca, Potencia: ford.Potencia, ford.Cor);
 
 Console.WriteLine("\nInformando o parâmetro opcional Ano");
 ford.ExibirInfo(Modelo: ford.Modelo, Montadora: ford.Montadora,

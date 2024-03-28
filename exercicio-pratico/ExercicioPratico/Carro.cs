@@ -102,7 +102,7 @@
             Console.WriteLine((Cores)Cor);
             }
 
-        public static void ObterValorIpva()
+        static Carro()
             {
             ValorIpva = 4;
             }
